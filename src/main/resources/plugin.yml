@@ -1,6 +1,6 @@
 name: RPG
 version: '${project.version}'
-main: rpg.rpg.RPG
+main: rpg.rpg.Main
 api-version: 1.17
 commands:
   RPG:
