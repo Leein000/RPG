@@ -4,6 +4,7 @@ import Atteck.Attack;
 import Event.BlockBreak;
 import Event.MonsterKill;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -21,7 +22,7 @@ import org.bukkit.event.Listener;
 import Stat.Stat;
 import Stat.StatGUI;
 
-public class Main extends JavaPlugin implements Listener
+public class Main extends JavaPlugin implements Listener, CommandExecutor
 {
     public Stat s = new Stat();
     public Attack A = new Attack();
@@ -33,6 +34,8 @@ public class Main extends JavaPlugin implements Listener
     {
         getServer().getPluginManager().registerEvents(this, this);
         Bukkit.getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "RPG 스텟 Plugin 활성화");
+
+        getCommand("스텟").setExecutor(new StatGUI());
     }
 
     public void onDisable()
@@ -57,7 +60,7 @@ public class Main extends JavaPlugin implements Listener
         player.sendMessage("나의 레벨 : " + stat[0] + "  나의 힘" + stat[5]);
         SGUI.StatusGUI((Player) player);
     }
-
+    @Override
     public boolean onCommand(CommandSender player, Command command, String string, String[] args)
     {
         if(player instanceof Player)
@@ -71,7 +74,6 @@ public class Main extends JavaPlugin implements Listener
 
         return false;
     }
-
 
     @EventHandler
     public void InventoryClick(InventoryClickEvent event)

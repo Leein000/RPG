@@ -9,10 +9,8 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.material.MaterialData;
 
 import java.util.Arrays;
-import java.util.Date;
 import java.util.List;
 
 public class StatGUI
@@ -72,7 +70,6 @@ public class StatGUI
 
     private <T> void Stack(String s, int i, int i1, int i2, List<T> asList, int i3, Inventory inv) {
     }
-
 
     public void StatGUIClicked(InventoryClickEvent event)
     {
