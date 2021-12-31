@@ -3,14 +3,16 @@ package Stat;
 import Effect.Sounds;
 import org.bukkit.ChatColor;
 import org.bukkit.Sound;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.FileReader;
 
-public class Stat
-{
+public class Stat implements CommandExecutor {
     public Sounds s = new Sounds();
 
     public void CreateNewStat(String player) {
@@ -135,5 +137,9 @@ public class Stat
         return stat;
     }
 
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        return false;
+    }
 }
 

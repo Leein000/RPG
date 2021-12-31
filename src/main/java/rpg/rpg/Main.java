@@ -36,6 +36,7 @@ public class Main extends JavaPlugin implements Listener, CommandExecutor
         Bukkit.getConsoleSender().sendMessage(ChatColor.LIGHT_PURPLE + "RPG 스텟 Plugin 활성화");
 
         getCommand("스텟").setExecutor(new StatGUI());
+        getCommand("레벨업").setExecutor(new Stat());
     }
 
     public void onDisable()

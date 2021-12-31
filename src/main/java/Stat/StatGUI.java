@@ -4,6 +4,9 @@ import Atteck.DamageCalculator;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
@@ -13,8 +16,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.Arrays;
 import java.util.List;
 
-public class StatGUI
-{
+public class StatGUI implements CommandExecutor {
     public Stat s = new Stat();
     public DamageCalculator DC = new DamageCalculator();
 
@@ -95,6 +97,11 @@ public class StatGUI
                 }
             }
         }
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+        return false;
     }
 }
 
