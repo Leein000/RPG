@@ -1,0 +1,7 @@
+name: RPG
+version: '${project.version}'
+main: rpg.rpg.RPG
+api-version: 1.17
+commands:
+  스텟:
+    description: §e/스텟 §f을 치면 자신의 스텟을 볼 수 있습니다.
