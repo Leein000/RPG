@@ -1,16 +1,14 @@
 package Event;
 
-import Stat.Stat;
+import Stat.Stat;import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
-import org.bukkit.event.entity.EntityDeathEvent;
-
 public class MonsterKill
 {
+public Stat s = new Stat();
 
-    public Stat s = new Stat();
 
     public void MonsterKill(EntityDeathEvent event)
     {
