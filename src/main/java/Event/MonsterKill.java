@@ -1,6 +1,7 @@
 package Event;
 
-import Stat.Stat;import org.bukkit.event.entity.EntityDeathEvent;
+import Stat.Stat;
+import org.bukkit.event.entity.EntityDeathEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.EntityType;
