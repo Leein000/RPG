@@ -85,7 +85,7 @@ public class Attack
         Dstat = s.getStat(defenser.getUniqueId().toString());
         if(AttackType == "활공격")
         {
-            long[] Atsat;
+            long[] AStat;
             long Damage = DC.Balance(DC.RangeMinDamage(attacker, DefaultDamage, Astat[6]), DC.RangeMaxDamage(attacker, DefaultDamage, Astat[6]),(int) Astat[6]);
             Damage = DC.Critical(attacker, Astat[9], Astat[6], Damage);
             Damage = (Damage*Astat[10])/100;
